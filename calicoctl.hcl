@@ -3,10 +3,9 @@ repository = "https://github.com/projectcalico/calico"
 binaries = ["calicoctl"]
 test = "calicoctl version"
 
-version "3.21.3" "3.21.4" "3.21.5" "3.21.6" "3.22.0" "3.22.1" "3.22.3" "3.22.4"
-        "3.23.0" "3.23.1" "3.23.2" "3.23.3" "3.23.4" "3.23.5" "3.24.0" "3.24.1" "3.24.2"
-        "3.24.3" "3.24.4" "3.24.5" "3.24.6" "3.25.0" "3.25.1" "3.25.2" "3.26.0" "3.26.1"
-        "3.26.2" "3.26.3" {
+version "3.23.0" "3.23.1" "3.23.2" "3.23.3" "3.23.4" "3.23.5" "3.24.0" "3.24.1"
+        "3.24.2" "3.24.3" "3.24.4" "3.24.5" "3.24.6" "3.25.0" "3.25.1" "3.25.2" "3.26.0"
+        "3.26.1" "3.26.2" "3.26.3" {
   source = "https://github.com/projectcalico/calico/releases/download/v${version}/calicoctl-${os}-${arch}"
 
   on "unpack" {
@@ -21,7 +20,8 @@ version "3.21.3" "3.21.4" "3.21.5" "3.21.6" "3.22.0" "3.22.1" "3.22.3" "3.22.4"
   }
 }
 
-version "3.22.2" "3.22.5" {
+version "3.21.3" "3.21.4" "3.21.5" "3.21.6" "3.22.0" "3.22.1" "3.22.2" "3.22.3"
+        "3.22.4" "3.22.5" {
   darwin {
     source = "https://github.com/projectcalico/calico/releases/download/v${version}/calicoctl-${os}-amd64"
 
@@ -34,7 +34,7 @@ version "3.22.2" "3.22.5" {
   }
 
   linux {
-    source = "https://github.com/projectcalico/calico/releases/download/v${version}/calicoctl-${os}-amd64"
+    source = "https://github.com/projectcalico/calico/releases/download/v${version}/calicoctl-${os}-${arch}"
 
     on "unpack" {
       rename {
